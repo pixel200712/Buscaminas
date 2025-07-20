@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Buscaminas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>💣 Buscaminas 💣</h1>
+  <div id="info">
+    <span >Minas: <span id="minas-restantes">10</span></span>
+    <span>Puntos: <span id="puntaje">0</span></span>
+  </div>
+
+  <div id="tablero"></div>
+
+  <div class="contenedor-botones">
+    <button id="btn-pista" title="Mostrar pista">🎯 Pistas: 3</button>
+    <button id="btn-pista-minas" title="Mostrar pista de minas">💣 Minas: 3</button>
+  </div>
+
+  <!-- Pantalla de Fin de Juego -->
+    <div id="pantalla-fin" class="oculto">
+    <div class="mensaje-fin">
+        <h2>💥 ¡Perdiste! 💥</h2>
+        <button id="btn-reiniciar">Volver a jugar</button>
+        <button id="btn-menu">Volver al menú principal</button>
+    </div>
+    </div>
+
+  <script src="logros.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

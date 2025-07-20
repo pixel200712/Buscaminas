@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buscaminas</title>
+    <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e);
+  background-size: 400% 400%;
+  animation: animarFondo 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes animarFondo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.menu-container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ffffff2a;
+  backdrop-filter: blur(10px);
+}
+
+.titulo-juego {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #f0f, 0 0 20px #f0f;
+}
+
+.btn-menu {
+  display: block;
+  width: 220px;
+  margin: 10px auto;
+  padding: 15px;
+  font-size: 1.1rem;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #f0f;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #f0f, 0 0 10px #f0f inset;
+}
+
+.btn-menu:hover {
+  background: #f0f;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #f0f, 0 0 30px #f0f inset;
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- Menú (oculto al principio) -->
+    <div id="menu-principal" class="oculto menu-container">
+    <h1 class="titulo-juego">💣 Buscaminas 💣</h1>
+    <button class="btn-menu" onclick="jugar()">▶️ Jugar</button>
+    <button class="btn-menu" onclick="mostrarInstrucciones()">❓ Cómo se juega</button>
+    <button class="btn-menu" onclick="verLogros()">🏆 Logros</button>
+    <button class="btn-menu">✨ No hace nada pero se ve bien</button>
+    </div>
+
+    <script>
+    //inician las funciones del menu 
+    function jugar() {
+      window.location.href = 'index.html';
+    }
+
+    function mostrarInstrucciones() {
+    window.location.href = 'instrucciones.html';
+    }
+
+    function verLogros() {
+      window.location.href = 'logros.html';
+    }
+    </script>
+  </body>
+</html>

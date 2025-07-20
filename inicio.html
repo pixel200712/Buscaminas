@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buscaminas</title>
+    <link rel="stylesheet" href="inicio.css" />
+  </head>
+  <body>
+    <!-- Pantalla de carga -->
+    <div id="pantalla-carga">
+        <h1 class="cargando">Cargando<span class="puntos">...</span></h1>
+        <div id="barra-contenedor">
+            <div id="barra-progreso">
+                <span id="porcentaje">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menú (oculto al principio) -->
+    <div id="menu-principal" class="oculto menu-container">
+    <h1 class="titulo-juego">💣 Buscaminas 💣</h1>
+    <button class="btn-menu" onclick="jugar()">▶️ Jugar</button>
+    <button class="btn-menu" onclick="mostrarInstrucciones()">❓ Cómo se juega</button>
+    <button class="btn-menu" onclick="verLogros()">🏆 Logros</button>
+    <button class="btn-menu">✨ No hace nada pero se ve bien</button>
+    </div>
+
+    <script src="inicio.js"></script>
+  </body>
+</html>

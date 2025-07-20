@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Logros Desbloqueados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background:
+        radial-gradient(circle at center, #05050a 0%, #000000 90%),
+        repeating-conic-gradient(#0ff1 0deg 5deg, transparent 5deg 10deg);
+      font-family: 'Orbitron', monospace;
+      color: #0ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .contenedor-logros {
+      background: #111115dd;
+      border: 2px solid #0ff;
+      border-radius: 20px;
+      padding: 30px 40px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow:
+        0 0 10px #0ff,
+        0 0 30px #0ff,
+        inset 0 0 15px #0ff;
+      animation: fadeInScale 0.7s ease forwards;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      color: #f0f;
+      text-shadow:
+        0 0 8px #f0f,
+        0 0 20px #0ff;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+li {
+  background: #000012cc;
+  border: 1.8px solid #0ff;
+  border-radius: 15px;
+  padding: 18px 20px;
+  box-shadow:
+    0 0 10px #0ff,
+    inset 0 0 6px #0ff;
+  color: #0ff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: default;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 20px #0ff,
+    inset 0 0 12px #0ff;
+  background: #001122cc;
+}
+
+li.locked {
+  color: #44475a;
+  border-color: #44475a;
+  box-shadow: none;
+  cursor: not-allowed;
+  background: #222;
+}
+
+li.locked::before {
+  content: '🔒';
+  color: #666677;
+  text-shadow: none;
+  opacity: 1;
+  position: absolute;
+  left: 15px;
+  font-size: 1.5rem;
+}
+
+li:not(.locked)::before {
+  content: '✔';
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #0ff;
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff;
+  position: absolute;
+  left: 15px;
+}
+
+
+    a.boton-regresar {
+      display: block;
+      margin: 40px auto 0 auto;
+      width: fit-content;
+      padding: 12px 32px;
+      background: linear-gradient(135deg, #f0f, #0ff);
+      color: #000;
+      font-weight: 700;
+      border-radius: 25px;
+      box-shadow:
+        0 0 8px #0ff,
+        0 0 20px #f0f;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1.2rem;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+    a.boton-regresar:hover {
+      background: linear-gradient(135deg, #0ff, #f0f);
+      box-shadow:
+        0 0 20px #f0f,
+        0 0 40px #0ff;
+    }
+
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.85);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes checkAppear {
+      0% {
+        opacity: 0;
+        transform: translateX(-10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor-logros">
+    <h1>🏆 Logros</h1>
+    <ul id="lista-logros"></ul>
+    <a href="menu.html" class="boton-regresar">⬅️ Regresar</a>
+  </div>
+
+  <script src="logros.js"></script>
+
+</body>
+</html>

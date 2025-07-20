@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instrucciones</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+        color: #0ff;
+        font-family: "Orbitron", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-image: radial-gradient(circle at center, #111 0%, #000 100%);
+      }
+
+      .contenedor {
+        background: #111;
+        padding: 40px;
+        border: 2px solid #f0f;
+        border-radius: 16px;
+        box-shadow: 0 0 15px #f0f, 0 0 30px #0ff;
+        text-align: center;
+        max-width: 500px;
+        animation: aparecer 0.8s ease;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        text-shadow: 0 0 8px #f0f;
+      }
+
+      p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      a.boton {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 25px;
+        background: #f0f;
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 10px;
+        box-shadow: 0 0 8px #0ff, 0 0 16px #f0f;
+        transition: background 0.3s ease;
+      }
+
+      a.boton:hover {
+        background: #0ff;
+        color: #000;
+      }
+
+      @keyframes aparecer {
+        from {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <h1>📜 Instrucciones</h1>
+      <p>Haz clic en las casillas para descubrirlas.</p>
+      <p>Evita las bombas 💣 y pon banderas con clic derecho.</p>
+      <p>¡Buena suerte!</p>
+      <a href="index.html" class="boton">🎮 Jugar</a>
+    </div>
+  </body>
+</html>
